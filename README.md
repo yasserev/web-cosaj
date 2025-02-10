@@ -1,13 +1,14 @@
-# COSAJ Website
+# Eficiencia Industrial Website
 
 ## Descripción
-Sitio web institucional para COSAJ, una empresa especializada en soluciones de mejora industrial mediante software, automatización administrativa y operativa.
+Sitio web institucional para Eficiencia Industrial, una empresa especializada en soluciones de mejora industrial mediante software, automatización administrativa y operativa.
 
 ## Características
 - Diseño responsivo
 - Secciones:
   - Inicio
   - Servicios
+  - Productividad
   - Nosotros
   - Contacto
 
@@ -15,15 +16,19 @@ Sitio web institucional para COSAJ, una empresa especializada en soluciones de m
 - HTML5
 - CSS3
 - JavaScript
+- Chart.js (gráficos de productividad)
 - Font Awesome (iconos)
 
 ## Configuración
 1. Clonar el repositorio
 2. Abrir `index.html` en un navegador web
 
+## Dominio
+- Sitio web: [eficienciaindustrial.tech](https://eficienciaindustrial.tech)
+
 ## Personalización
-- Reemplazar `logo.png` con el logotipo de la empresa
-- Actualizar información de contacto en `index.html`
+- Reemplazar imágenes de marcador de posición
+- Actualizar información de contacto
 - Modificar estilos en `styles.css`
 
 ## Próximos Pasos
@@ -32,4 +37,4 @@ Sitio web institucional para COSAJ, una empresa especializada en soluciones de m
 - Optimizar para SEO
 
 ## Contacto
-contacto@cosaj.com
+contacto@eficienciaindustrial.tech
