@@ -1,0 +1,11 @@
+{
+  "name": "cosaj-website",
+  "version": "1.0.0",
+  "description": "Sitio web de COSAJ",
+  "scripts": {
+    "build": "echo 'Construcción completada'"
+  },
+  "keywords": ["industrial", "automation", "software"],
+  "author": "COSAJ Team",
+  "license": "ISC"
+}
