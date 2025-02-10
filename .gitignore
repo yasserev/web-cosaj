@@ -1,0 +1,18 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Directorios de dependencias
+node_modules/
+
+# Archivos de configuración de editores
+.vscode/
+.idea/
+
+# Archivos de registro
+*.log
+
+# Archivos de compilación
+*.compiled
+*.min.js
+*.min.css
