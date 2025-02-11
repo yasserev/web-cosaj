@@ -137,9 +137,9 @@ nav ul li a:hover::after {
 
 @media screen and (max-width: 768px) {
     nav {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 10px 15px;
         height: 60px;
         position: relative;
@@ -148,7 +148,6 @@ nav ul li a:hover::after {
     nav .logo {
         display: flex;
         align-items: center;
-        justify-self: start;
     }
 
     nav .logo img {
@@ -157,12 +156,9 @@ nav ul li a:hover::after {
     }
 
     nav .company-name {
-        justify-self: center;
         font-size: 1em;
         color: var(--primary-color);
-        text-align: center;
-        white-space: nowrap;
-        margin: 0;
+        margin-right: 15px;
     }
 
     .hamburger-menu {
