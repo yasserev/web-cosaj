@@ -137,20 +137,18 @@ nav ul li a:hover::after {
 
 @media screen and (max-width: 768px) {
     nav {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
         padding: 10px 15px;
         height: 60px;
-        overflow: hidden;
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 
     nav .logo {
         display: flex;
         align-items: center;
-        position: static;
-        transform: none;
+        justify-self: start;
     }
 
     nav .logo img {
@@ -159,10 +157,7 @@ nav ul li a:hover::after {
     }
 
     nav .company-name {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        justify-self: center;
         font-size: 1em;
         color: var(--primary-color);
         text-align: center;
@@ -171,9 +166,16 @@ nav ul li a:hover::after {
     }
 
     .hamburger-menu {
-        position: static;
-        transform: none;
         display: flex;
+        justify-self: end;
+    }
+
+    .hamburger-menu span {
+        width: 25px;
+        height: 3px;
+        background-color: var(--primary-color);
+        margin: 3px 0;
+        transition: 0.4s;
     }
     
     .nav-menu {
