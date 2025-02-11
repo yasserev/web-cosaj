@@ -60,81 +60,68 @@ header {
 
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 nav .logo img {
-    height: 50px;
-    margin-right: 10px;
+    height: 60px;
+    transition: transform 0.3s ease;
 }
 
-nav .company-name {
-    font-size: 1.2em;
+nav .logo .company-name {
     font-weight: bold;
+    font-size: 1.2em;
     color: var(--primary-color);
+}
+
+nav .logo img:hover {
+    transform: scale(1.05);
 }
 
 nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--primary-color);
-    font-weight: 600;
-    position: relative;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: var(--gradient-primary);
-    transition: width 0.3s ease;
-}
-
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
-nav ul li a:hover::after {
-    width: 100%;
+/* Ocultar header-company-name en PC */
+.header-company-name {
+    display: block;
 }
 
-/* Estilos para menú de hamburguesa */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1000;
+/* Mostrar nombre de empresa junto al logo en PC */
+@media screen and (min-width: 769px) {
+    nav .logo .company-name {
+        display: block;
+    }
+    
+    .header-company-name {
+        display: none;
+    }
 }
 
-.hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-color);
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
+/* Estilos móviles */
 @media screen and (max-width: 768px) {
     nav {
         display: flex;
@@ -163,17 +150,27 @@ nav ul li a:hover::after {
     .header-company-name {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
         font-size: 1em;
         color: var(--primary-color);
         white-space: nowrap;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+        font-weight: bold;
     }
 
     .hamburger-menu {
         position: absolute;
         right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        z-index: 1001;
+        cursor: pointer;
     }
 
     .hamburger-menu span {
@@ -183,7 +180,7 @@ nav ul li a:hover::after {
         margin: 3px 0;
         transition: 0.4s;
     }
-    
+
     .nav-menu {
         display: none;
         position: fixed;
@@ -195,7 +192,7 @@ nav ul li a:hover::after {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 999;
+        z-index: 1000;
     }
     
     .nav-menu.active {
@@ -210,19 +207,19 @@ nav ul li a:hover::after {
         font-size: 1.5em;
         color: var(--primary-color);
     }
-}
 
-/* Animación del menú hamburguesa */
-.hamburger-menu.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
+    /* Animación del menú hamburguesa */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
 
-.hamburger-menu.active span:nth-child(2) {
-    opacity: 0;
-}
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
 
-.hamburger-menu.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
 
 /* Hero Section */
