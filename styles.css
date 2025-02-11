@@ -60,33 +60,27 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 nav .logo img {
-    height: 60px;
-    margin-right: 15px;
-    transition: transform 0.3s ease;
+    height: 50px;
+    margin-right: 10px;
 }
 
-nav .logo .company-name {
-    font-weight: bold;
+nav .company-name {
     font-size: 1.2em;
-    color: var(--primary-color); /* Usando el color primario para contraste */
-}
-
-nav .logo img:hover {
-    transform: scale(1.05);
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 nav ul {
@@ -142,6 +136,35 @@ nav ul li a:hover::after {
 }
 
 @media screen and (max-width: 768px) {
+    nav {
+        padding: 10px 15px;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    nav .logo {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav .logo img {
+        height: 40px;
+        margin-right: 0;
+    }
+
+    nav .company-name {
+        display: none;
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .hamburger-menu {
         display: flex;
         position: absolute;
