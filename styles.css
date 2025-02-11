@@ -140,6 +140,7 @@ nav ul li a:hover::after {
         padding: 10px 15px;
         height: 60px;
         overflow: hidden;
+        position: relative;
     }
 
     nav .logo {
@@ -155,7 +156,15 @@ nav ul li a:hover::after {
     }
 
     nav .company-name {
-        display: none;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1em;
+        color: var(--primary-color);
+        text-align: center;
+        white-space: nowrap;
     }
 
     .hamburger-menu {
