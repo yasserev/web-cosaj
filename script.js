@@ -94,4 +94,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Menú de hamburguesa
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinksMenu = navMenu.querySelectorAll('a');
+
+    hamburgerMenu.addEventListener('click', function() {
+        hamburgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    navLinksMenu.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburgerMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
 });
