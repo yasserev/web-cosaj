@@ -139,31 +139,41 @@ nav ul li a:hover::after {
     nav {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         padding: 10px 15px;
         height: 60px;
         position: relative;
     }
 
     nav .logo {
+        position: absolute;
+        left: 15px;
         display: flex;
         align-items: center;
     }
 
     nav .logo img {
         height: 40px;
-        margin-right: 10px;
     }
 
-    nav .company-name {
+    nav .logo .company-name {
+        display: none;
+    }
+
+    .header-company-name {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 1em;
         color: var(--primary-color);
-        margin-right: 15px;
+        white-space: nowrap;
     }
 
     .hamburger-menu {
+        position: absolute;
+        right: 15px;
         display: flex;
-        justify-self: end;
+        align-items: center;
     }
 
     .hamburger-menu span {
