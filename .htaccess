@@ -1,0 +1,22 @@
+# Forzar HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Configuraciones de seguridad adicionales
+<IfModule mod_headers.c>
+    # Prevenir ataques de clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevenir ataques XSS
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevenir MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Política de Seguridad de Contenido
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://kit.fontawesome.com https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io;"
+</IfModule>
+
+# Protección contra ataques de directorio
+Options -Indexes
