@@ -141,22 +141,24 @@ nav ul li a:hover::after {
         height: 60px;
         overflow: hidden;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     nav .logo {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        position: static;
+        transform: none;
     }
 
     nav .logo img {
         height: 40px;
-        margin-right: 0;
+        margin-right: 10px;
     }
 
     nav .company-name {
-        display: block;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -165,20 +167,13 @@ nav ul li a:hover::after {
         color: var(--primary-color);
         text-align: center;
         white-space: nowrap;
+        margin: 0;
     }
 
     .hamburger-menu {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .hamburger-menu {
+        position: static;
+        transform: none;
         display: flex;
-        position: absolute;
-        right: 20px;
-        top: 20px;
     }
     
     .nav-menu {
