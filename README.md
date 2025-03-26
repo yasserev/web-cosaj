@@ -1,7 +1,7 @@
 # Eficiencia Industrial Website
 
 ## Descripción
-Sitio web institucional para Eficiencia Industrial, una empresa especializada en soluciones de mejora industrial mediante software, automatización administrativa y operativa.
+Sitio web institucional para COSAJ, una empresa especializada en soluciones de mejora industrial mediante software, automatización administrativa y operativa.
 
 ## Características
 - Diseño responsivo
@@ -26,7 +26,7 @@ Para configurar correctamente el dominio personalizado y el certificado SSL en G
 1. En la configuración del repositorio en GitHub:
    - Ir a "Pages"
    - Seleccionar rama "main" como fuente
-   - Verificar que el dominio personalizado (eficienciaindustrial.tech) esté configurado
+   - Verificar que el dominio personalizado (cosaj.tech) esté configurado
    - Habilitar HTTPS
 
 2. En tu proveedor de dominio (donde compraste eficienciaindustrial.tech):
@@ -49,7 +49,7 @@ Si persisten problemas con el certificado:
 - Contactar soporte de GitHub
 
 ## Dominio
-- Sitio web: [eficienciaindustrial.tech](https://eficienciaindustrial.tech)
+- Sitio web: [cosaj.tech](https://cosaj.tech)
 
 ## Personalización
 - Reemplazar imágenes de marcador de posición
@@ -62,4 +62,4 @@ Si persisten problemas con el certificado:
 - Optimizar para SEO
 
 ## Contacto
-Soporte: contacto@eficienciaindustrial.tech
+Soporte: yespinoza@cosaj.tech
